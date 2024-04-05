@@ -12,12 +12,6 @@ lazy val commonSettings = Seq(
   scalaVersion := "2.13.12",
 )
 
-lazy val commonDependencies = Seq(
-  "com.beachape" %% "enumeratum" % "1.7.3",
-  "com.beachape" %% "enumeratum-reactivemongo-bson" % "1.7.3",
-)
-
-
 lazy val root = (project in file("."))
   .settings(
     name := "akka-tcp-app",
@@ -26,6 +20,8 @@ lazy val root = (project in file("."))
       "com.typesafe.akka" %% "akka-actor-typed" % AkkaVersion,
       "com.typesafe.akka" %% "akka-stream" % AkkaVersion,
       "com.typesafe.akka" %% "akka-http" % AkkaHttpVersion,
-      "ch.qos.logback" % "logback-classic" % "1.4.14"
+      "ch.qos.logback" % "logback-classic" % "1.4.14",
+      "com.beachape" %% "enumeratum" % "1.7.3",
+      "com.beachape" %% "enumeratum-reactivemongo-bson" % "1.7.3",
     )
   )
